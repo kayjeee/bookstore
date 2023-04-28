@@ -106,6 +106,14 @@ navBooks.addEventListener('click', () => {
   bookSection.style.display = 'flex';
   contactSection.style.display = 'none';
 });
+navContact.addEventListener('click', () => {
+  navHome.style.color = 'black';
+  navBooks.style.color = 'blue';
+  navContact.style.color = 'black';
+  homeSection.style.display = 'none';
+  bookSection.style.display = 'none';
+  contactSection.style.display = 'block';
+});
 const handleNavClick = (navItem, navItems, sections) => {
   // Reset all nav items and sections
   navItems.forEach((item) => {
@@ -126,8 +134,7 @@ const handleNavClick = (navItem, navItems, sections) => {
 
 navContact.addEventListener('click', () => {
   const navItems = navBar.querySelectorAll('.nav-item');
-  const sections = document.querySelectorAll('.section');
-  handleNavClick(navContact, navItems, sections);
+  handleNavClick(navContact, navItems, [contactSection]); // <-- Pass contactSection as argument
 });
 
 const timeSlot = document.getElementById('time');
