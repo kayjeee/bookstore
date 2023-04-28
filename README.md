@@ -92,7 +92,7 @@ S
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-N/A
+https://github.com/kayjeee/bookstore/pull/4
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
