@@ -8,16 +8,20 @@
     <title>Awesome Books</title>
   </head>
   <body>
-    <h1>My Book Collection</h1>
-    <form>
-      <label for="title">Title:</label>
-      <input type="text" id="title">
-      <label for="author">Author:</label>
-      <input type="text" id="author">
-      <button type="submit" id="add-btn">Add</button>
-    </form>
-    <ul id="book-list"></ul>
-    <script src="./index.js" type="module"></script>
+    <main>
+      <div class="bodyh1">
+          <h1>Awesome books</h1>
+          
+      </div>  
+
+      <form action="" id="addNewForm">
+          <input type="text" id="bookTitle" class="bookTitle" placeholder="Title"><br>
+          <input type="text" id="authorName" class="authorName" placeholder="Author"><br>
+          <button id="addBook">Add</button>
+      </form>
+ 
+      <script src="./index.js" type="module"></script>
+    </main>
 
   </body>
 </html>
