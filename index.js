@@ -1,24 +1,26 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable linebreak-style */
 // Retrieve saved book data from localStorage (if any)
-let bookCollection = JSON.parse(localStorage.getItem("bookCollection")) || [];
+let bookCollection = JSON.parse(localStorage.getItem('bookCollection')) || [];
 
 // Select DOM elements
-const titleInput = document.getElementById("title");
-const authorInput = document.getElementById("author");
-const addBtn = document.getElementById("add-btn");
-const bookList = document.getElementById("book-list");
+const titleInput = document.getElementById('title');
+const authorInput = document.getElementById('author');
+const addBtn = document.getElementById('add-btn');
+const bookList = document.getElementById('book-list');
 
 // Display initial book collection
 renderBookList();
 
 // Add event listener to "Add" button
-addBtn.addEventListener("click", (event) => {
+addBtn.addEventListener('click', (event) => {
   event.preventDefault();
   const title = titleInput.value.trim();
   const author = authorInput.value.trim();
   if (title && author) {
     addBook(title, author);
-    titleInput.value = "";
-    authorInput.value = "";
+    titleInput.value = '';
+    authorInput.value = '';
   }
 });
 
@@ -26,31 +28,31 @@ addBtn.addEventListener("click", (event) => {
 function addBook(title, author) {
   const newBook = { title, author };
   bookCollection.push(newBook);
-  localStorage.setItem("bookCollection", JSON.stringify(bookCollection));
+  localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
   renderBookList();
 }
 
 // Function to remove a book from the collection
 function removeBook(title, author) {
   bookCollection = bookCollection.filter(
-    (book) => book.title !== title || book.author !== author
+    (book) => book.title !== title || book.author !== author,
   );
-  localStorage.setItem("bookCollection", JSON.stringify(bookCollection));
+  localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
   renderBookList();
 }
 
 // Function to render the book list
 function renderBookList() {
-  bookList.innerHTML = "";
+  bookList.innerHTML = '';
   bookCollection.forEach((book) => {
-    const li = document.createElement("li");
-    const title = document.createElement("span");
+    const li = document.createElement('li');
+    const title = document.createElement('span');
     title.textContent = book.title;
-    const author = document.createElement("span");
+    const author = document.createElement('span');
     author.textContent = ` by ${book.author}`;
-    const removeBtn = document.createElement("button");
-    removeBtn.textContent = "Remove";
-    removeBtn.addEventListener("click", () => {
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    removeBtn.addEventListener('click', () => {
       removeBook(book.title, book.author);
     });
     li.appendChild(title);
