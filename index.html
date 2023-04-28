@@ -6,17 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awesome books</title>
-  <link rel="styleSheet" href="styles.css">
+  <link rel="styleSheet" href="style.css">
 </head>
 
 <body>
- 
+  <header>
+    <nav>
+      <h2>Awesome Books</h2>
+      <ul>
+        <li class="nav-home">List</li>
+        <li class="nav-books">Add new</li>
+        <li class="nav-contact">Contacts</li>
+      </ul>
+    </nav>
+    <p id="time" class="time"></p>
+  </header>
   <section id="time" class="time"></section>
 
   <main class="mainDiv">
-
     <section class="home">
-      <h1 class="title">All books</h1>
+      <h1 class="title">All awesome books</h1>
       <div class="tableContainer">
         <table id="bookList">
           <tbody class="bodyh1">
@@ -24,6 +33,7 @@
         </table>
       </div>
     </section>
+
     <section class="books">
       <h2 class="title">Add a new book</h2>
       <form action="" id="addNewForm">
@@ -34,11 +44,22 @@
         </div>
       </form>
     </section>
-    
 
-  
+    <section class="contacts">
+      <h2 class="title"> Contact Information</h2>
+      <p>Do you have any question or you just want to say "Hello"?<br>
+        You can reach out to us!</p>
+      <ul>
+        <li>Our email: mailto@mail.com</li>
+        <li>Our phone number: +243xxxxxx987</li>
+        <li>Our address : StreetName 22, 128964 City, Country</li>
+      </ul>
+    </section>
   </main>
 
+  <footer>
+    <h2 class="footer-title">Copyright</h2>
+  </footer>
 
   <script src="index.js"></script>
 </body>
