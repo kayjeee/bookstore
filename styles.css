@@ -87,6 +87,6 @@ table {
 @media only screen and (max-width: 768px) {
   .home,
   .books {
-  max-width: 100%;
+    max-width: 100%;
   }
 }
