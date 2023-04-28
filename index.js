@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+// eslint-disable-next-line linebreak-style
 /* eslint-disable no-use-before-define */
 /* eslint-disable linebreak-style */
 // Retrieve saved book data from localStorage (if any)
