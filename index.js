@@ -78,3 +78,59 @@ deleteBtn.forEach((button) => {
     storeForm(books);
   });
 });
+
+// SPA
+
+const navHome = document.querySelector('.nav-home');
+const navBooks = document.querySelector('.nav-books');
+const navContact = document.querySelector('.nav-contact');
+
+const homeSection = document.querySelector('.home');
+const bookSection = document.querySelector('.books');
+const contactSection = document.querySelector('.contacts');
+
+navHome.addEventListener('click', () => {
+  navHome.style.color = 'blue';
+  navBooks.style.color = 'black';
+  navContact.style.color = 'black';
+  homeSection.style.display = 'flex';
+  bookSection.style.display = 'none';
+  contactSection.style.display = 'none';
+});
+navBooks.addEventListener('click', function changeDisplay() {
+  navHome.style.color = 'black';
+  navBooks.style.color = 'blue';
+  navContact.style.color = 'black';
+  homeSection.style.display = 'none';
+  bookSection.style.display = 'flex';
+  contactSection.style.display = 'none';
+});
+
+function handleNavClick(navItem, navItems, sections) {
+  // Reset all nav items and sections
+  navItems.forEach(item => (item.style.color = 'black'));
+  sections.forEach(section => (section.style.display = 'none'));
+
+  // Highlight selected nav item and show corresponding section
+  navItem.style.color = 'blue';
+  const sectionId = navItem.dataset.sectionId;
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.style.display = 'flex';
+  }
+}
+
+navContact.addEventListener('click', () => {
+  const navItems = navBar.querySelectorAll('.nav-item');
+  const sections = document.querySelectorAll('.section');
+  handleNavClick(navContact, navItems, sections);
+});
+
+const timeSlot = document.getElementById('time');
+
+const today = new Date();
+const date = `${today.toLocaleString('default', { month: 'long' })} ${today.getDate()} ${today.getFullYear()}`;
+const time = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+const dateTime = `${date} ${time}`;
+
+timeSlot.innerHTML = dateTime;
