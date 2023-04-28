@@ -92,7 +92,7 @@ S
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-
+N/A
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,6 +100,7 @@ S
 
 ## 🚀 Loom Walkthrough <a name="Loom Walkthrough"></a>
 
+N/A
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING  STARTED  -->
