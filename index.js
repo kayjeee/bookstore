@@ -53,6 +53,7 @@ const addButton = document.getElementById('addBook');
 const newTitle = document.getElementById('bookTitle');
 const newAuthor = document.getElementById('authorName');
 const container = document.querySelector('.bodyh1');
+const navBar = document.querySelector('.nav-bar');
 
 for (let i = 0; i < books.length; i += 1) {
   const book = displayBooks(books[i], i);
@@ -97,7 +98,7 @@ navHome.addEventListener('click', () => {
   bookSection.style.display = 'none';
   contactSection.style.display = 'none';
 });
-navBooks.addEventListener('click', function changeDisplay() {
+navBooks.addEventListener('click', () => {
   navHome.style.color = 'black';
   navBooks.style.color = 'blue';
   navContact.style.color = 'black';
@@ -105,20 +106,23 @@ navBooks.addEventListener('click', function changeDisplay() {
   bookSection.style.display = 'flex';
   contactSection.style.display = 'none';
 });
-
-function handleNavClick(navItem, navItems, sections) {
+const handleNavClick = (navItem, navItems, sections) => {
   // Reset all nav items and sections
-  navItems.forEach(item => (item.style.color = 'black'));
-  sections.forEach(section => (section.style.display = 'none'));
+  navItems.forEach((item) => {
+    item.style.color = 'black';
+  });
+  sections.forEach((section) => {
+    section.style.display = 'none';
+  });
 
   // Highlight selected nav item and show corresponding section
   navItem.style.color = 'blue';
-  const sectionId = navItem.dataset.sectionId;
+  const { sectionId } = navItem.dataset;
   const section = document.getElementById(sectionId);
   if (section) {
     section.style.display = 'flex';
   }
-}
+};
 
 navContact.addEventListener('click', () => {
   const navItems = navBar.querySelectorAll('.nav-item');
