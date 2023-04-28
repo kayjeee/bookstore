@@ -33,10 +33,9 @@ addButton.addEventListener('click', (e) => {
 
     books.push(newBook);
     storeForm(books);
-    const books = displayBooks(newBook , books.length - 1);
+    const book = displayBooks(newBook, books.length - 1);
 
-  container.innerHTML += book;
-
+    container.innerHTML += book;
   }
   addButton.form.reset(); // use form property of the button element to reset the form
 });
