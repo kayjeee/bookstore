@@ -1,14 +1,6 @@
+/* stylelint-disable comment-empty-line-before */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-/* General reset styles */
-
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Main styles */
 body {
   font-family: 'Roboto Mono', monospace;
 }
@@ -32,20 +24,13 @@ body {
   margin-bottom: 1rem;
 }
 
-
 .books {
-    width: 100%;
-    max-width: 60rem;
-    margin-top: 2rem;
-    padding: 1rem;
-    border: 2px solid #000;
+  width: 100%;
+  max-width: 60rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 2px solid #000;
 }
-  
-  .books .title {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
 
 .books .title {
   text-align: center;
@@ -92,10 +77,11 @@ button#addBook:hover {
   color: #fff;
   font-size: 1.2rem;
 }
+
 table {
-    border-collapse: collapse;
-    width: 140%;
-    max-width: 90rem;
+   border-collapse: collapse;
+   width: 140%;
+   max-width: 90rem;
 }
 /* Media queries */
 @media only screen and (max-width: 768px) {
