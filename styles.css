@@ -68,6 +68,15 @@ header nav ul li:first-child {
   display: none;
   flex-direction: column;
   align-items: center;
+  background-color: #f2f2f2;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to { opacity: 1; }
 }
 
 .contacts {
