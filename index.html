@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Awesome Books</title>
-  </head>
-  <body>
-    <main>
-      <div class="bodyh1">
-          <h1>Awesome books</h1>
-          
-      </div>  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome books</title>
+  
+</head>
 
-      <form action="" id="addNewForm">
-          <input type="text" id="bookTitle" class="bookTitle" placeholder="Title"><br>
-          <input type="text" id="authorName" class="authorName" placeholder="Author"><br>
-          <button id="addBook">Add</button>
-      </form>
+<body>
  
-      <script src="./index.js" type="module"></script>
-    </main>
+  <section id="time" class="time"></section>
 
-  </body>
+  <main class="mainDiv">
+    <section class="home">
+      <h1 class="title">All books</h1>
+      <div class="tableContainer">
+        <table id="bookList">
+          <tbody class="bodyh1">
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="books">
+      <h2 class="title">Add a new book</h2>
+      <form action="" id="addNewForm">
+        <input type="text" id="bookTitle" class="bookTitle" placeholder="Title"><br>
+        <input type="text" id="authorName" class="authorName" placeholder="Author"><br>
+        <div class="fBtnCont">
+          <button id="addBook">Add</button>
+        </div>
+      </form>
+    </section>
+
+  
+  </main>
+
+
+  <script src="index.js"></script>
+</body>
+
 </html>
