@@ -79,14 +79,14 @@ button#addBook:hover {
 }
 
 table {
-   border-collapse: collapse;
-   width: 140%;
-   max-width: 90rem;
+  border-collapse: collapse;
+  width: 140%;
+  max-width: 90rem;
 }
 /* Media queries */
 @media only screen and (max-width: 768px) {
   .home,
   .books {
-    max-width: 100%;
+  max-width: 100%;
   }
 }
