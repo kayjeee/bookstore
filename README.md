@@ -92,7 +92,7 @@ S
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-https://github.com/kayjeee/bookstore/pull/4
+https://kayjeee.github.io/bookstore/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,8 +100,7 @@ https://github.com/kayjeee/bookstore/pull/4
 
 ## 🚀 Loom Walkthrough <a name="Loom Walkthrough"></a>
 
-N/A
-
+v
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING  STARTED  -->
 
