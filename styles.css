@@ -1,92 +1,210 @@
-/* stylelint-disable comment-empty-line-before */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-
-body {
-  font-family: 'Roboto Mono', monospace;
+* {
+  box-sizing: border-box;
 }
 
-.mainDiv {
+body {
+  height: 90vh;
+  padding: 0 30px 0 30px;
+}
+
+header {
+  height: 70px;
+}
+
+header nav {
+  border: 2px solid black;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav h2 {
+  width: 30%;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+header nav ul {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+header nav ul li {
+  list-style-type: none;
+  cursor: pointer;
+  border-right: 1px black solid;
+  padding-right: 5px;
+}
+
+header nav ul li:last-child {
+  border-right: none;
+}
+
+header nav ul li:first-child {
+  color: blue;
+}
+
+.time {
+  display: flex;
+  justify-content: end;
+  margin: 5px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+
+.books {
+  padding-top: 10px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to { opacity: 1; }
+}
+
+.contacts {
+  height: 100%;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
 
-.home {
+.contacts p {
+  font-size: 15px;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.contacts ul {
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 36px;
+}
+
+.mainDiv {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.mainDiv h1 {
+  margin-bottom: 5px;
+}
+
+.hrDiv {
+  width: 20%;
+  margin-top: 30px;
+}
+
+.hrDiv hr {
+  height: 5px;
+  background-color: black;
+  border-radius: 30px;
+}
+
+.mainDiv h2 {
+  margin-bottom: 5px;
+}
+
+.tableContainer {
+  border: 1px solid rgb(7, 106, 103);
+  width: 80%;
+}
+
+.tableRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tableRow button {
+  border: 2px solid black;
+  margin-right: 8px;
+  box-shadow: 2px 2px black;
+  text-shadow: 0.5px 0.5px black;
+  text-decoration: solid;
+}
+
+#bookList {
+  border: 1px solid black;
   width: 100%;
-  max-width: 60rem;
-  margin-top: 2rem;
-  padding: 1rem;
-  border: 2px solid #000;
 }
 
-.home .title {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.books {
-  width: 100%;
-  max-width: 60rem;
-  margin-top: 2rem;
-  padding: 1rem;
-  border: 2px solid #000;
-}
-
-.books .title {
-  text-align: center;
-  margin-bottom: 1rem;
+#bookList tr:nth-child(odd) {
+  background-color: #d5d1d1;
 }
 
 #addNewForm {
+  margin: 0;
+  height: 100%;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  align-items: flex-end;
 }
 
-input[type="text"] {
-  padding: 0.5rem;
-  border: 1px solid #000;
+#addNewForm input {
+  border: 2px solid black;
+  margin: 5px 0;
+  width: 100%;
+  padding: 3px;
+}
+
+#addNewForm button {
+  border: 2px solid black;
+  margin-right: 5px;
+  box-shadow: 2px 2px black;
+  text-decoration: solid;
+  text-shadow: 0.5px 0.5px black;
 }
 
 .fBtnCont {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 1rem;
+  justify-content: end;
 }
 
-button#addBook {
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
+footer {
+  width: 100%;
+  border: 2px solid black;
+  margin-top: 10px;
+  padding: 5px 10px;
 }
 
-button#addBook:hover {
-  background-color: #fff;
-  color: #000;
+.footer-title {
+  font-size: 18px;
+  margin-left: 20px;
 }
 
-/* Optional styles */
-.time {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.5rem;
-  background-color: #000;
-  color: #fff;
-  font-size: 1.2rem;
+.animation {
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
-table {
-  border-collapse: collapse;
-  width: 140%;
-  max-width: 90rem;
-}
-/* Media queries */
-@media only screen and (max-width: 768px) {
-  .home,
-  .books {
-    max-width: 100%;
-  }
+@keyframes example {
+  0% { background-color: red; }
+  50% { background-color: blue; }
+  100% { background-color: red; }
 }
